@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width==device-width, initial-scale=1.0">
+    <title>WaveDesk</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/greeting.css">
+    <link rel="stylesheet" href="style/1.css">
+    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="style/media.css">
+    <link rel="stylesheet" href="style/js.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+</style>
+
+  </head>
+  <body onselectstart="return false">
+    <div class="window">
+      <div class="display--imgs">
+        <div class="img back js-gradient"></div>
+        <div class="img grid_sky js-grid"></div>
+        <div class="img sun js-sun"></div>
+        <div class="img grid_floor js-grid"></div>
+        <div class="img main_shadow js-main"></div>
+        <div class="img main js-main" ></div>
+      </div>
+
+      <ul class="icon--wrap">
+        <li class="icon">
+          <button type="button" name="button" value="modal1" class="icon__btn icon1">
+          </button>
+          Display
+        </li>
+        <li class="icon">
+          <button type="button" name="button" value="modal2" class="icon__btn icon2">
+          </button>
+          Todo
+        </li>
+        <li class="icon">
+          <button type="button" name="button" value="modal3" class="icon__btn icon3">
+          </button>
+          Paint
+        </li>
+      </ul>
+
+<section id="modal1" class="modal--wrap">
+  <div class="modal modal--display border js-purple">
+  <div class="tab ">
+    <img src="img/computer.png" alt="display_icon" class="tab__img">
+    <h1>Display</h1>
+    <button type="button" name="button" class="tab__btn border close js-purple" value="modal1"></button>
+  </div>
+    <ul class="display__btn--wrap">
+      <li>
+        <button type="button" name="button" id="js-gradient" class=" display__btn js-display" value="show"></button>
+      </li>
+      <li>
+        <button type="button" name="button" id="js-grid" class="display__btn js-display" value="show"></button>
+      </li>
+      <li>
+        <button type="button" name="button" id="js-sun" class="display__btn js-display" value="show"></button>
+      </li>
+      <li>
+        <button type="button" name="button" id="js-main" class="display__btn js-display" value="show"></button>
+      </li>
+      <li>
+        <button type="button" name="button" id="js-border" class="display__btn " value="purple"></button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="modal2" class="modal--wrap" style="z-index:200">
+  <div class="modal modal--todo border js-purple">
+  <div class="tab ">
+    <img src="img/todo1.png" alt="todo_icon" class="tab__img">
+    <h1>Todo </h1>
+    <button type="button" name="button" class="tab__btn border close js-purple" value="modal2"></button>
+  </div>
+  <article class="todo__article border--reverse">
+    <ul class="js-toDoList toDoList"></ul>
+    <a href="#" class="js-delAll delAll"></a>
+    <div class="todo__form--wrap">
+      <p>please input your task</p>
+      <form class="js-toDoForm todo__form">
+        <i></i>
+        <input type="text">
+      </form>
+    </div>
+  </article>
+  </div>
+</section>
+
+<section id="modal3" class="modal--wrap"  style="z-index:100">
+  <div class="modal modal--paint border js-purple ">
+  <div class="tab ">
+    <img src="img/paint1.png" alt="paint_icon" class="tab__img">
+    <h1>Paint</h1>
+    <button type="button" name="button" class="tab__btn border close js-purple" value="modal3"></button>
+  </div>
+  <ul class="paint--top">
+    <li><a href="#" onclick="NewImage()">new</a></li>
+    <li><a href="#" onclick="SaveImage()">save</a></li>
+    <li>
+      <input type="range" id="js-Range" min="1" max="11" value="2" step="1">
+    </li>
+  </ul>
+  <article class="paint__article">
+    <div class="paint--tools">
+      <button type="button" name="button" id="js-line" class="tools__btn border--reverse js-purple--reverse" onclick="ChangeTool('js-line')"></button>
+      <button type="button" name="button" id="js-fill" class="tools__btn border js-purple" onclick="ChangeTool('js-fill')"></button>
+      <button type="button" name="button" id="js-rectangle" class="tools__btn border js-purple" onclick="ChangeTool('js-rectangle')"></button>
+      <button type="button" name="button" id="js-triangle" class="tools__btn border js-purple" onclick="ChangeTool('js-triangle')"></button>
+      <button type="button" name="button" id="js-circle" class="tools__btn border js-purple" onclick="ChangeTool('js-circle')"></button>
+      <button type="button" name="button" id="js-ellipse" class="tools__btn border js-purple" onclick="ChangeTool('js-ellipse')"></button>
+      <button type="button" name="button" id="js-polygon" class="tools__btn border js-purple" onclick="ChangeTool('js-polygon')"></button>
+    </div>
+    <canvas id="js-canvas" class="paint__canvas border--reverse" ></canvas>
+    <div class="tablet">
+      <div class="currentColor--wrap">
+        <div class="backColor currentColor border--reverse" style="background-color:white"></div>
+        <div id="js-frontColor" class=" currentColor border--reverse" style="background-color:black"></div>
+      </div>
+      <div class="row">
+        <div class="js-Colors palette--colors border--reverse" style="background-color:black"></div>
+        <div class="js-Colors palette--colors border--reverse" style="background-color:white"></div>
+      </div>
+      <div class="row">
+        <div class="js-Colors palette--colors border--reverse" style="background-color:rgb(88, 88, 88)"></div>
+        <div class="js-Colors palette--colors border--reverse" style="background-color:rgb(179, 172, 172)"></div>
+      </div>
+      <div class="row">
+        <div class="js-Colors palette--colors border--reverse" style="background-color:rgb(255, 48, 154)"></div>
+        <div class="js-Colors palette--colors border--reverse" style="background-color:rgb(255, 131, 195)"></div>
+      </div>
+      <div class="row">
+        <div class="js-Colors palette--colors border--reverse" style="background-color:red"></div>
+        <div class="js-Colors palette--colors border--reverse" style="background-color:rgb(249, 81, 81)"></div>
+      </div>
+      <div class="row">
+        <div class="js-Colors palette--colors border--reverse" style="background-color:orange"></div>
+        <div class="js-Colors palette--colors border--reverse" style="background-color:rgb(250, 187, 80)"></div>
+      </div>
+      <div class="row">
+        <div class="js-Colors palette--colors border--reverse" style="background-color:yellow"></div>
+        <div class="js-Colors palette--colors border--reverse" style="background-color:rgb(244, 255, 119)"></div>
+      </div>
+      <div class="row">
+        <div class="js-Colors palette--colors border--reverse" style="background-color:green"></div>
+        <div class="js-Colors palette--colors border--reverse" style="background-color:rgb(50, 204, 56)"></div>
+      </div>
+      <div class="row">
+        <div class="js-Colors palette--colors border--reverse" style="background-color:blue"></div>
+        <div class="js-Colors palette--colors border--reverse" style="background-color:rgb(62, 111, 255)"></div>
+      </div>
+      <div class="row">
+        <div class="js-Colors palette--colors border--reverse" style="background-color:purple"></div>
+        <div class="js-Colors palette--colors border--reverse" style="background-color:rgb(177, 51, 255)"></div>
+      </div>
+    </div>
+
+  </article>
+  </div>
+</section>
+
+
+    <footer class="taskbar js-purple">
+      <button type="button" name="button" class="taskbar__btn wd border--reverse js-purple--reverse">
+        <img class="taskbar--icon" src="img/welcome4.png" alt="wavedesk_icon" >
+      WD</button>
+      <button type="button" name="button" class="taskbar__btn js-taskbar__btn border js-purple" value="modal1">
+        <img class="taskbar--icon" src="img/computer.png" alt="wavedesk_icon" >
+        Display</button>
+      <button type="button" name="button" class="taskbar__btn js-taskbar__btn border js-purple" value="modal2">
+        <img class="taskbar--icon" src="img/todo1.png" alt="wavedesk_icon" >
+        Todo</button>
+      <button type="button" name="button" class="taskbar__btn js-taskbar__btn border js-purple" value="modal3">
+        <img class="taskbar--icon" src="img/paint1.png" alt="wavedesk_icon" >
+        Paint</button>
+      <div class="js-clock">
+        <h6  class="clock border--reverse js-purple">00:00:00</h6>
+      </div>
+    </footer>
+</div>
+<!-- intro -->
+<div class="intro js-intro show">
+  <main>
+  <img src="img/welcome1.png" alt="" class="intro__img">
+  <div class="welcome js-welcome">
+    <h2 class="intro__h2 js-welcomeH2"></h2>
+  </div>
+  <div class="js-greeting greeting">
+    <h2 class="intro__h2 js-greetH2"></h2>
+    <form class="greeting__form js-greetForm">
+      <i></i>
+      <input type="text" maxlength="10">
+    </form>
+  </main>
+  </div>
+</div>
+
+  <script src="js/intro.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/btn.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/paint.js"></script>
+  </body>
+</html>

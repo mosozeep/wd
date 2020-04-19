@@ -1,0 +1,211 @@
+@charset "UTF-8";
+.modal--display{
+  width: 300px;
+  height: 100px;
+  top: 10px; right: 10px;
+}
+
+.display__btn--wrap {
+  margin: 10px 24px 20px;
+}
+
+.display__btn--wrap > li{
+  float: left;
+  margin: 0 5px;
+}
+
+.display__btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 5px;
+  background-color: rgb(190, 0, 0);
+  box-shadow: 0 5px 0 #790000;
+  transition: 0.2s all ease;
+}
+
+.display__btn--wrap > li:hover >.display__btn{
+  margin-top: 8px;
+  box-shadow: 0 1px 0 #8c0000;
+}
+
+.display__btn--reverse{
+  margin-top: 8px;
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0 1px 0 #8c0000;
+}
+/* TODo */
+.modal--todo{
+  width: 95%;
+  max-width: 600px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.todo__article{
+  height: 448px;
+  background-color: #000;
+  color: white;
+  margin-top: 3px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+.todo__article a,btn{
+  cursor: pointer;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+.todo__article a:hover ,btn:hover{
+  text-decoration: underline;
+}
+.toDoList > li {
+  list-style: square;
+  margin-top: 5px;
+  margin-left:  15px;
+  width: 540px;
+  clear: both;
+}
+.toDoList > li > span {
+  width: 300px;
+  display: block;
+  float: left;
+}
+
+.toDoList > li > a {
+  padding: 0 5px;
+}
+
+.delAll {
+  clear: both;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 320px;
+  text-decoration: overline underline;
+}
+.delAll:hover{
+  color: #000;
+  background: #fff;
+}
+
+.todo__form--wrap > p{
+  margin: 5px 0;
+  background-color: #fff;
+  color: #000;
+  text-indent: 5px;
+}
+.todo__form--wrap{
+  clear: both;
+}
+
+.todo__form > input{
+  margin-left: 5px;
+}
+
+/* PAINT */
+.modal--paint{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.paint--top{
+  display: inline-block;
+  height: 20px;
+}
+
+.paint--top > li {
+  float: left;
+}
+.paint--top > li >a{
+  display: inline-block;
+ padding: 5px;
+ line-height: 15px;
+}
+.paint--top>li>input{
+  margin-left: 5px;
+  width: 100px;
+  height: 25px;
+}
+.paint__article{
+  display: flex;
+  flex-direction: row;
+}
+.paint--tools{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+}
+
+.tablet{
+  display: flex;
+  flex-direction:column;
+}
+.row{
+  display: flex;
+  flex-direction:row-reverse;
+}
+.palette--colors{
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+}
+.paint__canvas{
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  margin: 2px;
+}
+
+.currentColor--wrap{
+  width: 36px;
+  height: 38px;
+  margin-right: 5px;
+  padding-left: 3px;
+}
+.tools__btn{
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}
+#js-line{
+  background-image: url('../img/line.gif');
+}
+#js-fill{
+  background-image: url('../img/fill.gif');
+}
+#js-rectangle{
+  background-image: url('../img/rectangle.gif');
+}
+#js-triangle{
+  background-image: url('../img/triangle.gif');
+}
+#js-circle{
+  background-image: url('../img/circle.gif');
+}
+#js-ellipse{
+  background-image: url('../img/ellipse.gif');
+}
+
+#js-polygon{
+  background-image: url('../img/polygon.gif');
+}
+.currentColor--wrap{
+  position: relative;
+  padding-top: 2px;
+}
+.currentColor{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+box-sizing: border-box;
+}
+.backColor{
+  top: 12px;
+  left: 12px;
+/* transform: translate(50%,50%); */
+}

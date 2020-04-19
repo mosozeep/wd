@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@media (min-width:400px) and (max-width:600px) {
+  .paint__canvas{
+    width: 80vw;
+    height: 80vw;
+  }
+}
+@media (max-width:400px) {
+  .todo__article a,btn{
+  }
+  .toDoList > li {
+    width: 99%;
+  }
+  .delAll{
+    margin-left: 20px;
+  }
+
+  .paint__canvas{
+    width: 300px;
+    height: 300px;
+  }
+  .paint__article{
+    display: flex;
+    flex-direction: column;
+  }
+  .paint--tools{
+    display: flex;
+    flex-direction: row;}
+  .tablet{
+    display: flex;
+    flex-direction: row;
+    }
+    .row{
+      display: flex;
+      flex-direction: column;
+    }
+
+  .clock{
+    display: none;
+  }
+  .taskbar__btn{
+    line-height: 2vh;
+  }
+  }

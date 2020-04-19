@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+@font-face { font-family: 'DungGeunMo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+font-weight: normal; font-style: normal; }
+
+body{
+font-family: 'DungGeunMo';
+  font-size:15px;
+  background-color: #000;
+  font-size: 25px;
+  font-weight: 500;
+}
+button:focus{
+  outline: 0;
+}
+
+.border{
+  background-color: #bfb8bf;
+  border-top: 2px solid #d5d5d5;
+  border-left: 2px solid #d5d5d5;
+  border-bottom: 2px solid #131313;
+  border-right: 2px solid #131313;
+}
+
+.border--reverse{
+  border-bottom: 2px solid  #d5d5d5;
+  border-right: 2px solid  #d5d5d5;
+  border-top: 2px solid #131313;
+  border-left:2px solid #131313;
+}
+
+.window{
+  background-color: #008c94;
+  max-width: 130vh;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+.back{
+  background-image: url("../img/back.png");
+}
+.grid_sky{
+  background-image: url("../img/grid_sky.png");
+}
+.sun{
+  background-image: url("../img/sun4.png");
+}
+.grid_floor{
+  background-image: url("../img/grid_floor.png");
+}
+.main_shadow{
+  background-image: url("../img/main_shadow.png");
+}
+.main{
+  background-image: url("../img/main1.gif");
+}
+
+.icon--wrap{
+  position: absolute;
+  top: 10px;;
+  left: 0;
+}
+
+.icon{
+  box-sizing: border-box;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+.icon__btn{
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  display: block;
+  background: rgba(0, 0, 0, 0);
+  background-size: cover;
+}
+
+.icon1{
+  background-image: url("../img/computer.png");
+}
+.icon2{
+  background-image: url("../img/todo1.png");
+}
+.icon3{
+  background-image: url("../img/paint.png");
+}
+
+.taskbar{
+  height: 4vh;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  bottom: 0; left: 0;
+  background-color: #bfb8bf;
+  border-top: 1.5px solid #fff;
+  box-shadow: 0 -1.5px 0 #dfd8df;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.wd{
+  background-color: #bfb8bf;
+}
+
+.taskbar__btn{
+  float: left;
+  height: 80%;
+  padding: 1px;
+  margin: 0.5vh 0.25vh;
+  line-height:80%;
+}
+
+.taskbar--icon{
+  height: 80%;
+  padding: 2px;
+  float: left;
+  filter: saturate(3);
+}
+
+.clock {
+  float: right;
+  margin: 4px 2px;
+  background-color: #bfb8bf;
+  height: 80%;
+  padding: 1px 13px;
+  font-size: 80%;
+  line-height: 80%;
+  font-size: 100%;
+}
+
+.modal--wrap{
+  visibility: hidden;
+}
+.modal{
+  background-color: #bfb8bf;
+  position: absolute;
+  padding: 2px;
+}
+
+
+.tab{
+  height: 25px;
+  padding:0 2px;
+  position: relative;
+  color: white;
+  background-color: rgb(7, 9, 147);
+}
+
+.tab > h1{
+  line-height: 25px;
+  float: left;
+}
+
+.tab__btn{
+  margin: 3px 0;
+  float: right;
+  width: 20px;
+  height: 20px;
+}
+
+.tab__img{
+  height: 80%;
+  float: left;
+  padding: 2px;
+  margin-right: 2px;
+}
+.close{
+  background-image: url("../img/x.png");
+  background-size: cover;
+}

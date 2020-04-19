@@ -1,0 +1,118 @@
+form{
+  display: flex;
+  flex-direction: row;
+}
+
+input{
+  background-color: #000;
+  color: transparent;
+  width: 250px;
+  min-width: 50px;
+  padding: 3px 0;
+  text-shadow: 0 0 0 #fff;
+}
+input:focus{
+  outline: 0;
+}
+i{
+  display: block;
+	width: 10px;
+	height: 15px;
+  margin: 6.5px 0;
+  background-image: url(../img/blink.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+	animation-name: blink;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	opacity: 1;
+}
+@keyframes blink {
+  0% {opacity: 0}
+  	49%{opacity: 0}
+  	50% {opacity: 1}
+  }
+
+@keyframes rotateIMG {
+  from{
+   transform: rotateY(0deg);
+   moz-transform: rotateY(0deg); //Firefox
+   ms-transform: rotateY(0deg); //Microsoft Browsers
+   }
+   to{
+   transform: rotateY(360deg);
+   moz-transform: rotateY(360deg); //Firefox
+   ms-transform: rotateY(360deg); //Microsoft Browsers
+   }
+  }
+  @-webkit-keyframes rotateIMG{
+   from{-webkit-transform: rotateY(0deg);}
+   to{-webkit-transform: rotateY(360deg);}
+  }
+
+.intro{
+  width: 100vw; height: 100vh;
+  background-color: #000;
+  position: fixed;
+  top: 0; left: 0;
+  color: #1bff00;
+  display: none;
+}
+.intro__h2{
+  font-size: 30px;
+  margin: 0 auto;
+}
+.intro > main{
+  height: 500px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  background: #000;
+}
+
+.intro__img{
+  width: 350px;
+  animation-name: rotateIMG;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  -webkit-animation-name: rotateIMG;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+}
+
+.welcome{
+  background: #000;
+  width: 350px;
+  height: 20vh;
+  margin: 0 auto;
+  font-size: 20px;
+  display: none;
+}
+.welcome > .intro__h2{
+  width: 300px;
+}
+.greeting{
+  background-color: #000;
+  width: 350px;
+  height: 20vh;
+  margin: 0 auto;
+  display: none;
+}
+.greeting > .intro__h2{
+  width: 280px;
+}
+
+.greeting__form > i {
+  background-image: url(../img/blinkGreen.gif);
+  width: 15px;
+  height: 17px;
+  padding-top: 6px;
+}
+.greeting__form > input {
+  text-shadow: 0 0 0 #1bff00;
+  text-indent: 15px;
+  font-size: 30px;
+  width: 335px;
+}
